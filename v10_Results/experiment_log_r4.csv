@@ -1,0 +1,4 @@
+exp_id,change_description,baseline_f1,new_f1,delta_f1,baseline_auc,new_auc,delta_auc,baseline_std,new_std,fp,fn,verdict
+4.1,Weighted ensemble LSTM+RF,0.8635,0.8948,+0.0313,0.8612,0.9195,+0.0583,0.0369,0.0129,19,19,KEEP
+4.2,Platt scaling calibration,0.8635,0.8604,-0.0031,0.8612,0.8757,+0.0145,0.0369,0.0428,35,18,REVERT
+4.3,Hard negative mining,0.8635,0.8085,-0.0550,0.8612,0.8371,-0.0241,0.0369,0.0555,38,32,REVERT

@@ -1,0 +1,49 @@
+============================================================
+ERROR ANALYSIS — V11 R4 Best (4.1 Ensemble)
+============================================================
+
+=== FALSE POSITIVES (Normal -> predicted Shoplifting) ===
+  Normal_041_f2 | score=0.7543 | fold 1
+  Normal_071_f1 | score=0.7532 | fold 1
+  Normal_014_f1 | score=0.7526 | fold 3
+  Normal_066_f2 | score=0.7403 | fold 2
+  Normal_001_f5 | score=0.7373 | fold 1
+  Normal_013_f2 | score=0.6975 | fold 4
+  Normal_025_f1 | score=0.6860 | fold 1
+  Normal_004_f3 | score=0.6483 | fold 3
+  Normal_051_f2 | score=0.6371 | fold 4
+  Normal_013_f1 | score=0.5853 | fold 4
+  Normal_041_f1 | score=0.5776 | fold 1
+  Normal_039_f1 | score=0.5657 | fold 3
+  Normal_014_f2 | score=0.5444 | fold 3
+  Normal_034_f1 | score=0.5444 | fold 4
+  Normal_020_f2 | score=0.5409 | fold 3
+  Normal_004_f2 | score=0.5334 | fold 3
+  Normal_020_f1 | score=0.5151 | fold 3
+  Normal_016_f1 | score=0.5122 | fold 3
+  Normal_018_f1 | score=0.4538 | fold 3
+
+=== FALSE NEGATIVES (Shoplifting -> predicted Normal) ===
+  Shoplifting_125_part1 | score=0.1439 | fold 5
+  Shoplifting_084_part2 | score=0.1613 | fold 5
+  Shoplifting_070_part3 | score=0.1736 | fold 5
+  Shoplifting_104_part1 | score=0.1942 | fold 2
+  Shoplifting_125_part2 | score=0.2030 | fold 5
+  Shoplifting_108_part1 | score=0.2380 | fold 2
+  Shoplifting_107_part2 | score=0.2850 | fold 1
+  Shoplifting_134_part2 | score=0.2970 | fold 2
+  Shoplifting_058_part1 | score=0.3333 | fold 5
+  Shoplifting_101_part1 | score=0.3469 | fold 2
+  Shoplifting_091_part1 | score=0.3510 | fold 3
+  Shoplifting_057_part2 | score=0.3766 | fold 1
+  Shoplifting_109_part2 | score=0.3944 | fold 4
+  Shoplifting_100_part1 | score=0.3984 | fold 4
+  Shoplifting_060_part1 | score=0.4270 | fold 5
+  Shoplifting_132_part3 | score=0.4415 | fold 5
+  Shoplifting_085_part3 | score=0.4449 | fold 1
+  Shoplifting_098_part2 | score=0.4771 | fold 4
+  Shoplifting_136_part2 | score=0.4851 | fold 4
+
+Summary:
+  FP: 19 unique normal clips misclassified
+  FN: 19 unique shoplifting clips misclassified

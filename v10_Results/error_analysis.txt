@@ -1,0 +1,88 @@
+============================================================
+ERROR ANALYSIS
+Model: Hybrid C_spatial
+============================================================
+
+=== FALSE POSITIVES (Normal -> predicted Shoplifting) ===
+  Normal_066_f2 | score=0.9966 | fold 2
+  Normal_013_f2 | score=0.9963 | fold 4
+  Normal_078_f1 | score=0.9958 | fold 5
+  Normal_029_f1 | score=0.9950 | fold 2
+  Normal_013_f1 | score=0.9930 | fold 4
+  Normal_014_f1 | score=0.9926 | fold 3
+  Normal_031_f1 | score=0.9924 | fold 2
+  Normal_051_f2 | score=0.9916 | fold 4
+  Normal_037_f2 | score=0.9897 | fold 2
+  Normal_022_f2 | score=0.9874 | fold 5
+  Normal_083_f2 | score=0.9861 | fold 4
+  Normal_051_f1 | score=0.9824 | fold 4
+  Normal_071_f1 | score=0.9783 | fold 1
+  Normal_004_f2 | score=0.9719 | fold 3
+  Normal_072_f2 | score=0.9652 | fold 5
+  Normal_068_f2 | score=0.9511 | fold 1
+  Normal_089_f1 | score=0.9361 | fold 5
+  Normal_039_f2 | score=0.9344 | fold 3
+  Normal_001_f4 | score=0.9341 | fold 1
+  Normal_039_f1 | score=0.9275 | fold 3
+  Normal_086_f2 | score=0.8983 | fold 1
+  Normal_041_f2 | score=0.8923 | fold 1
+  Normal_071_f2 | score=0.8868 | fold 1
+  Normal_068_f1 | score=0.8713 | fold 1
+  Normal_077_f1 | score=0.8664 | fold 1
+  Normal_087_f1 | score=0.8573 | fold 3
+  Normal_086_f1 | score=0.8212 | fold 1
+  Normal_030_f1 | score=0.8091 | fold 4
+  Normal_014_f2 | score=0.7949 | fold 3
+  Normal_072_f1 | score=0.7443 | fold 5
+  Normal_044_f2 | score=0.7376 | fold 5
+  Normal_055_f2 | score=0.7350 | fold 5
+  Normal_074_f1 | score=0.7199 | fold 3
+  Normal_003_f1 | score=0.7002 | fold 1
+  Normal_062_f2 | score=0.6928 | fold 3
+  Normal_082_f1 | score=0.6903 | fold 4
+  Normal_023_f1 | score=0.5981 | fold 4
+  Normal_073_f2 | score=0.5899 | fold 4
+  Normal_016_f2 | score=0.4939 | fold 3
+  Normal_023_f2 | score=0.4843 | fold 4
+  Normal_060_f2 | score=0.4311 | fold 5
+  Normal_078_f2 | score=0.4018 | fold 5
+  Normal_002_f3 | score=0.3593 | fold 5
+  Normal_017_f2 | score=0.3308 | fold 5
+  Normal_002_f1 | score=0.2563 | fold 5
+  Normal_049_f2 | score=0.2089 | fold 5
+  Normal_044_f1 | score=0.1154 | fold 5
+  Normal_081_f2 | score=0.1144 | fold 5
+
+=== FALSE NEGATIVES (Shoplifting -> predicted Normal) ===
+  Shoplifting_109_part2 | score=0.0038 | fold 4
+  Shoplifting_125_part1 | score=0.0062 | fold 5
+  Shoplifting_115_part2 | score=0.0070 | fold 4
+  Shoplifting_108_part1 | score=0.0070 | fold 2
+  Shoplifting_064_part3 | score=0.0090 | fold 5
+  Shoplifting_070_part3 | score=0.0093 | fold 5
+  Shoplifting_074_part3 | score=0.0241 | fold 3
+  Shoplifting_064_part1 | score=0.0253 | fold 5
+  Shoplifting_084_part2 | score=0.0271 | fold 5
+  Shoplifting_064_part2 | score=0.0297 | fold 5
+  Shoplifting_074_part2 | score=0.0372 | fold 3
+  Shoplifting_057_part2 | score=0.0541 | fold 1
+  Shoplifting_117_part2 | score=0.0696 | fold 3
+  Shoplifting_091_part1 | score=0.0706 | fold 3
+  Shoplifting_063_part3 | score=0.1476 | fold 1
+  Shoplifting_085_part3 | score=0.1849 | fold 1
+  Shoplifting_085_part2 | score=0.1941 | fold 1
+  Shoplifting_106_part3 | score=0.2080 | fold 4
+  Shoplifting_066_part3 | score=0.2995 | fold 1
+  Shoplifting_071_part2 | score=0.3599 | fold 1
+  Shoplifting_067_part2 | score=0.4290 | fold 1
+  Shoplifting_134_part2 | score=0.4395 | fold 2
+  Shoplifting_061_part3 | score=0.4419 | fold 2
+  Shoplifting_101_part1 | score=0.4673 | fold 2
+  Shoplifting_107_part3 | score=0.5942 | fold 1
+  Shoplifting_104_part1 | score=0.7482 | fold 2
+
+Summary:
+  FP: 48 unique normal clips misclassified across folds
+  FN: 26 unique shoplifting clips misclassified across folds
+  Repeat FP offenders (misclassified 2+ times): None
+  Repeat FN offenders (misclassified 2+ times): None

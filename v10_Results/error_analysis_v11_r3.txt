@@ -1,0 +1,60 @@
+============================================================
+ERROR ANALYSIS — V11 R3 Best (3.5)
+============================================================
+
+=== FALSE POSITIVES (Normal -> predicted Shoplifting) ===
+  Normal_071_f1 | score=0.9850 | fold 1
+  Normal_025_f1 | score=0.9568 | fold 1
+  Normal_013_f2 | score=0.9352 | fold 4
+  Normal_022_f2 | score=0.8605 | fold 5
+  Normal_001_f1 | score=0.8586 | fold 1
+  Normal_066_f2 | score=0.8463 | fold 2
+  Normal_051_f2 | score=0.8187 | fold 4
+  Normal_041_f2 | score=0.8176 | fold 1
+  Normal_013_f1 | score=0.8051 | fold 4
+  Normal_051_f1 | score=0.7811 | fold 4
+  Normal_058_f1 | score=0.7787 | fold 1
+  Normal_020_f1 | score=0.7338 | fold 3
+  Normal_014_f1 | score=0.6944 | fold 3
+  Normal_043_f1 | score=0.6582 | fold 4
+  Normal_004_f2 | score=0.6234 | fold 3
+  Normal_005_f2 | score=0.6035 | fold 2
+  Normal_034_f1 | score=0.5868 | fold 4
+  Normal_083_f2 | score=0.5763 | fold 4
+  Normal_072_f1 | score=0.5757 | fold 5
+  Normal_070_f2 | score=0.5475 | fold 5
+  Normal_043_f2 | score=0.5263 | fold 4
+  Normal_089_f1 | score=0.5120 | fold 5
+  Normal_069_f1 | score=0.4762 | fold 4
+  Normal_072_f2 | score=0.4730 | fold 5
+  Normal_082_f1 | score=0.4609 | fold 4
+  Normal_030_f1 | score=0.4563 | fold 4
+  Normal_021_f1 | score=0.4438 | fold 5
+  Normal_021_f2 | score=0.4166 | fold 5
+
+=== FALSE NEGATIVES (Shoplifting -> predicted Normal) ===
+  Shoplifting_057_part2 | score=0.0367 | fold 1
+  Shoplifting_074_part3 | score=0.0832 | fold 3
+  Shoplifting_070_part3 | score=0.1243 | fold 5
+  Shoplifting_074_part2 | score=0.1338 | fold 3
+  Shoplifting_125_part1 | score=0.1657 | fold 5
+  Shoplifting_117_part2 | score=0.1759 | fold 3
+  Shoplifting_084_part2 | score=0.2249 | fold 5
+  Shoplifting_108_part1 | score=0.2291 | fold 2
+  Shoplifting_125_part2 | score=0.2299 | fold 5
+  Shoplifting_064_part3 | score=0.2628 | fold 5
+  Shoplifting_076_part1 | score=0.2706 | fold 3
+  Shoplifting_101_part1 | score=0.2931 | fold 2
+  Shoplifting_109_part2 | score=0.3097 | fold 4
+  Shoplifting_134_part2 | score=0.3177 | fold 2
+  Shoplifting_091_part1 | score=0.3358 | fold 3
+  Shoplifting_100_part1 | score=0.3407 | fold 4
+  Shoplifting_107_part2 | score=0.3439 | fold 1
+  Shoplifting_091_part2 | score=0.3828 | fold 3
+  Shoplifting_104_part1 | score=0.3876 | fold 2
+  Shoplifting_085_part3 | score=0.4302 | fold 1
+  Shoplifting_083_part2 | score=0.4831 | fold 3
+
+Summary:
+  FP: 28 unique normal clips misclassified
+  FN: 21 unique shoplifting clips misclassified
