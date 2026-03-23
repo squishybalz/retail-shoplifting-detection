@@ -2,8 +2,8 @@
 
 Privacy-preserving shoplifting detection from CCTV footage using skeleton pose estimation, LSTM with temporal attention, and ensemble methods.
 
-**Final Results: F1 = 0.895 | AUC = 0.919** (+127% over majority baseline)
-                **Mean Accuracy : 0.890 | Recall : 0.892 | Precision : 0.905**
+**Final Results: F1 = 0.895 | AUC = 0.919** (+127% over majority baseline) **| 
+                Mean Accuracy : 0.890 | Recall : 0.892 | Precision : 0.905**
 
 ---
 
