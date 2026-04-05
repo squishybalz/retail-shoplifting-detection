@@ -94,7 +94,7 @@ Raw Video (.mp4)
 # 1. Install dependencies
 pip install torch ultralytics numpy pandas scikit-learn xgboost matplotlib seaborn
 
-# 2. Extract features from video (requires GPU, ~30-60 min)
+# 2. Extract features from video
 python src/extract_features.py
 
 # 3. Train models and run experiments
