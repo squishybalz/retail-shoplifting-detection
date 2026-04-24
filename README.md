@@ -7,6 +7,17 @@ Privacy-preserving shoplifting detection from CCTV footage using skeleton pose e
 
 ---
 
+## Demo
+
+| Normal (Browsing) | Shoplifting (Concealment) |
+|:---:|:---:|
+| ![Normal](demo/normal_demo.png) | ![Shoplifting](demo/shoplifting_demo.png) |
+| [▶ Watch clip](demo/browsing_demo.mp4) | [▶ Watch clip](demo/pocket_demo.mp4) |
+
+*Skeleton overlay extracted via YOLO26s-pose. Red = shoplifting, Green = normal.*
+
+---
+
 ## Key Highlights
 
 - **Privacy-preserving** — only skeleton keypoints are stored, no appearance data
@@ -111,3 +122,38 @@ The YOLO model (`yolo26s-pose.pt`) downloads automatically on first run.
 358 balanced video clips (179 normal, 179 shoplifting) from public CCTV footage and staged scenarios. Each clip is 5-15 seconds, yielding skeleton tracks of 15-30 frames per tracked person.
 
 **Anti-leakage:** GroupKFold by source video ensures all fragments from the same scene stay in the same cross-validation fold.
+
+## V12: 3D Rotation Augmentation
+
+Added camera-viewpoint invariance via pseudo-3D rotation augmentation (lifts 2D keypoints to 3D, rotates, re-projects). Biased toward top-down CCTV angles (30-60° pitch).
+
+| Metric | V11 Ensemble | V12 Ensemble |
+|--------|-------------|-------------|
+| F1     | 0.895       | 0.870       |
+| AUC    | 0.919       | 0.894       |
+
+V12 trades ~2.5% on curated eval for viewpoint robustness. Both models fail on real CCTV footage — high false positive rate on normal shopping behavior.
+
+## CCTV Inference Tool
+
+```bash
+# Run on any video — outputs side-by-side V11 vs V12 annotated video
+python src/infer_cctv.py path/to/video.mp4
+
+# Custom threshold
+python src/infer_cctv.py path/to/video.mp4 --threshold 0.7
+
+# Custom output path
+python src/infer_cctv.py path/to/video.mp4 -o output.mp4
+```
+
+## Next Steps (V13: Real CCTV Fine-tuning)
+
+**Problem:** Model trained on 358 curated clips. Normal shopping behavior (browsing, picking up items) triggers false positives because the model learned "hand movement near torso = shoplifting."
+
+**Plan:**
+1. **Data collection** — Label 50-80 real CCTV clips (30-50 normal shopping, 20-30 actual shoplifting). Use the inference tool to identify which behaviors trigger false positives.
+2. **Fine-tuning pipeline** — Start from V12 weights (viewpoint-robust), fine-tune on real CCTV data with aggressive augmentation. Keep GroupKFold by source video.
+3. **Threshold calibration** — Use Platt scaling on real data to find a deployment-ready threshold that balances FP/FN for actual CCTV use.
+4. **Temporal aggregation** — Require N consecutive windows above threshold before flagging, to filter momentary spikes.
+5. **Re-evaluate** — Test on held-out real CCTV footage to measure actual deployment performance.
